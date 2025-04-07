@@ -8,39 +8,39 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
-require("core.global")
+require 'core.global'
 -- require("core.autocmd")
-require("core.options")
-require("core.keymaps")
+require 'core.options'
+require 'core.keymaps'
 
-local plugins = "plugins"
+local plugins = 'plugins'
 
 local opts = {
-	defaults = {
-		lazy = true,
-	},
-	install = {
-		colorscheme = { "catppuccin-mocha" },
-	},
-	rtp = {
-		disabled_plugins = {
-			"gzip",
-			"matchit",
-			"matchparen",
-			"netrw",
-			"netrwPlugin",
-			"tarPlugin",
-			"tohtml",
-			"tutor",
-			"zipPlugin",
-		},
-	},
---	change_detection = {
---		notify = false,
---	},
+  defaults = {
+    lazy = true,
+  },
+  install = {
+    colorscheme = { 'catppuccin-mocha' },
+  },
+  rtp = {
+    disabled_plugins = {
+      'gzip',
+      'matchit',
+      'matchparen',
+      'netrw',
+      'netrwPlugin',
+      'tarPlugin',
+      'tohtml',
+      'tutor',
+      'zipPlugin',
+    },
+  },
+  --	change_detection = {
+  --		notify = false,
+  --	},
 }
 
 -- Setup lazy.nvim
-require("lazy").setup(plugins,opt)
+require('lazy').setup(plugins, opt)
 
-vim.cmd.colorscheme "catppuccin"
+vim.cmd.colorscheme 'catppuccin-mocha'
