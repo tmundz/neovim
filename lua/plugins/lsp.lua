@@ -22,7 +22,7 @@ return {
           'html',
           'cssls',
           'emmet_language_server',
-          'htmx',
+          --'htmx',
           'tailwindcss',
           'ts_ls',
           'astro',
