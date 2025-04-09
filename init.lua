@@ -35,9 +35,9 @@ local opts = {
       'zipPlugin',
     },
   },
-  --	change_detection = {
-  --		notify = false,
-  --	},
+  change_detection = {
+    notify = false,
+  },
 }
 
 -- Setup lazy.nvim

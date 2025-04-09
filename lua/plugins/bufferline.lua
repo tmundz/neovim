@@ -44,61 +44,61 @@ return {
       highlights = {
         -- Background of the entire bufferline
         fill = {
-          fg = '#cba6f7', -- subtext0 for muted text
-          bg = '#1E1E2E', -- base
+          fg = '#D1B8CC', -- subtext1 for muted text
+          bg = '#3C2F5F', -- base
         },
         -- Unselected buffers
         buffer = {
-          fg = '#cba6f7', -- subtext0
-          bg = '#181825', -- mantle
+          fg = '#D1B8CC', -- subtext1
+          bg = '#2A1B3D', -- mantle
         },
         -- Selected buffer
         buffer_selected = {
-          fg = '#cba6f7', -- text
-          bg = '#45475A', -- surface1
+          fg = '#F5EBF2', -- text
+          bg = '#4B367C', -- crust
           bold = true,
           italic = false,
         },
         -- Separator between buffers
         separator = {
-          fg = '#f5c2e7', -- surface0
-          bg = '#181825', -- mantle
+          fg = '#C5B5E0', -- overlay0
+          bg = '#2A1B3D', -- mantle
         },
         separator_selected = {
-          fg = '#f5c2e7', -- surface0
-          bg = '#45475A', -- surface1
+          fg = '#C5B5E0', -- overlay0
+          bg = '#4B367C', -- crust
         },
         -- Modified buffer
         modified = {
-          fg = '#FAB387', -- peach
-          bg = '#181825', -- mantle
+          fg = '#E099AA', -- peach
+          bg = '#2A1B3D', -- mantle
         },
         modified_selected = {
-          fg = '#FAB387', -- peach
-          bg = '#45475A', -- surface1
+          fg = '#E099AA', -- peach
+          bg = '#4B367C', -- crust
         },
         -- Close icon
         close_button = {
-          fg = '#F38BA8', -- red
-          bg = '#181825', -- mantle
+          fg = '#FF6088', -- red
+          bg = '#2A1B3D', -- mantle
         },
         close_button_selected = {
-          fg = '#F38BA8', -- red
-          bg = '#45475A', -- surface1
+          fg = '#FF6088', -- red
+          bg = '#4B367C', -- crust
         },
         -- Tab (if you use mode = 'tabs')
         tab = {
-          fg = '#A6ADC8', -- subtext0
-          bg = '#181825', -- mantle
+          fg = '#D1B8CC', -- subtext1
+          bg = '#2A1B3D', -- mantle
         },
         tab_selected = {
-          fg = '#B4BEFE', -- lavender
-          bg = '#45475A', -- surface1
+          fg = '#A285D1', -- sapphire
+          bg = '#4B367C', -- crust
         },
         -- Indicator (if you change style to 'icon' or 'underline')
         indicator_selected = {
-          fg = '#89B4FA', -- blue
-          bg = '#45475A', -- surface1
+          fg = '#A285D1', -- sapphire
+          bg = '#4B367C', -- crust
         },
       },
     }

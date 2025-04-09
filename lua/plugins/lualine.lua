@@ -6,23 +6,23 @@ return {
       local cp = require('catppuccin.palettes').get_palette 'mocha'
       -- These are your custom colors from your catppuccin config
       local custom = {
-        base = '#0A0A0F',
-        mantle = '#121217',
-        crust = '#1A1A22',
-        text = '#B8C0CC',
-        subtext1 = '#6B7280',
-        subtext0 = '#4B5263',
-        overlay0 = '#907A9A',
-        mauve = '#705A8A',
-        flamingo = '#7A5A7A',
-        sapphire = '#4A5A8A',
-        teal = '#4A6A7A',
-        peach = '#6A4A6A',
-        red = '#6A3A5A',
-        green = '#5A6A6A',
-        yellow = '#6A5A4A',
+        base = '#1A1426', -- Updated to darker black-purple hint (matches Kitty)
+        mantle = '#2A1B3D', -- Slightly darker purple for contrast
+        crust = '#4B367C', -- Subtle highlight with purple tone
+        text = '#F5EBF2', -- Bright text with pink undertone
+        subtext1 = '#D1B8CC', -- Bright secondary text with pink cast
+        subtext0 = '#B89CB3', -- Bright comments with pink cast
+        overlay0 = '#C5B5E0', -- Lighter purple for line numbers
+        mauve = '#C080D0', -- Bright mauve (purplish-pink)
+        flamingo = '#F5A0C0', -- Bright flamingo (vibrant pink)
+        pink = '#FF85B3', -- Vibrant bright pink (focus color)
+        sapphire = '#A285D1', -- Bright bluish-purple
+        teal = '#A285D1', -- Already set to sapphire for purple emphasis
+        peach = '#E099AA', -- Bright peachy pink
+        red = '#FF6088', -- Bright vibrant red with pink undertone
+        green = '#B0A5E0', -- Changed to a light purple (replacing green for DiffAdd)
+        yellow = '#C5B5E0', -- Changed to overlay0 (light purple) for DiagnosticWarn, Debug
       }
-
       -- Merge custom colors with the palette
       for k, v in pairs(custom) do
         cp[k] = v
