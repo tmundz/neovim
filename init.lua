@@ -13,8 +13,6 @@ require 'core.global'
 require 'core.options'
 require 'core.keymaps'
 
-local plugins = 'plugins'
-
 local opts = {
   defaults = {
     lazy = true,
@@ -41,6 +39,8 @@ local opts = {
 }
 
 -- Setup lazy.nvim
-require('lazy').setup(plugins, opt)
-
+require('lazy').setup({
+  {import = "plugins"},
+  {import = "plugins.lsp"}
+}, opt)
 vim.cmd.colorscheme 'catppuccin-mocha'
