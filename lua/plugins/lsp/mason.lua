@@ -27,6 +27,12 @@ return {
         'black', -- python formatter
         'pylint', -- python linter
         'eslint_d', -- js linter
+        'shfmt',
+        -- 'google_java_format',
+        'ktlint',
+        'clang-format',
+        -- 'gofmt',
+        'rustfmt',
       },
     }
   end,
