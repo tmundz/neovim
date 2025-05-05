@@ -1,13 +1,21 @@
 return {
   'williamboman/mason.nvim',
   dependencies = {
+    "williamboman/mason-lspconfig.nvim",
+    "hrsh7th/cmp-nvim-lsp",
+    "neovim/nvim-lspconfig",
     'WhoIsSethDaniel/mason-tool-installer.nvim',
   },
   config = function()
+    -- import mason and mason_lspconfig
     local mason = require 'mason'
-
+    local mason_lspconfig = require 'mason-lspconfig'
     local mason_tool_installer = require 'mason-tool-installer'
-
+    -- NOTE: Moved from lspconfig.lua
+    -- import lspconfig plugin
+    local lspconfig = require 'lspconfig'
+    local cmp_nvim_lsp = require 'cmp_nvim_lsp' -- import cmp-nvim-lsp plugin
+    local capabilities = cmp_nvim_lsp.default_capabilities() -- used to enable autocompletion (assign to every lsp server config)
     -- enable mason and configure icons
     mason.setup {
       ui = {
@@ -18,7 +26,6 @@ return {
         },
       },
     }
-
     mason_tool_installer.setup {
       ensure_installed = {
         'prettier', -- prettier formatter
@@ -33,15 +40,15 @@ return {
         'clang-format',
         -- 'gofmt',
         'rustfmt',
-
         -- Langs
         'clangd',
         'dockerfile-language-server',
         'gopls',
-        'java-language-server',
+        --'java-language-server',
         'hyprls',
         'kotlin-language-server',
         'omnisharp',
+        'terraform-ls',
         'pyright',
         'rust-analyzer',
         'rust_hdl',
@@ -50,13 +57,13 @@ return {
         'zls',
         'termux-language-server',
         'asm-lsp',
-
+        'bash-language-server',
         -- Linters
         'ast-grep',
         'actionlint',
         'cpplint',
         'cmakelint',
-        'gospel',
+        -- 'gospel',
         'htmlhint',
         'jsonlint',
         'semgrep',
@@ -67,7 +74,6 @@ return {
         'vsg',
         'yamllint',
         'api-linter',
-
         -- DAP
         'bash-debug-adapter',
         'codelldb',
@@ -79,5 +85,14 @@ return {
         'netcoredbg',
       },
     }
+    
+    mason_lspconfig.setup_handlers({
+      -- default handler for installed servers
+      function(server_name)
+        lspconfig[server_name].setup({
+          capabilities = capabilities,
+        })
+      end,
+    }) -- Added closing brace here
   end,
 }
