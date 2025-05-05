@@ -40,7 +40,7 @@ local opts = {
 
 -- Setup lazy.nvim
 require('lazy').setup({
-  {import = "plugins"},
-  {import = "plugins.lsp"}
+  { import = 'plugins' },
+  { import = 'plugins.lsp' },
 }, opt)
 vim.cmd.colorscheme 'catppuccin-mocha'

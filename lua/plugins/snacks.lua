@@ -3,7 +3,7 @@ return {
   {
     'folke/snacks.nvim',
     priority = 1000,
-    lazy = true,
+    lazy = false,
     -- NOTE: Options
     opts = {
       -- Styling for each Item of Snacks
@@ -131,18 +131,10 @@ return {
         img_dirs = { 'img', 'images', 'assets', 'static', 'public', 'media', 'attachments', 'Archives/All-Vault-Images/', '~/Library', '~/Downloads' },
       },
       dashboard = {
-        enabled = false,
-        sections = {
-          { section = 'header' },
-          { section = 'keys', gap = 1, padding = 1 },
-          { section = 'startup' },
-          {
-            section = 'terminal',
-            cmd = 'ascii-image-converter ~/Desktop/Others/profiles.JPG -C -c',
-            random = 10,
-            pane = 2,
-            indent = 4,
-            height = 30,
+        preset = {
+          sections = {
+            { section = 'header' },
+            { section = 'keys', gap = 1, padding = 1 },
           },
         },
       },
