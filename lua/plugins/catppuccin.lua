@@ -86,6 +86,10 @@ return {
         treesitter = true,
         treesitter_context = true,
         which_key = true,
+        harpoon = true,
+        fern = true,
+        dap = true,
+        dap_ui = true,
       },
     }
   end,
